@@ -25,10 +25,10 @@ if (mongoURL == null) {
     mongoUser = process.env[mongoServiceName + '_USER'];
 
   // If using env vars from secret from service binding  
-  } else if (process.env['database-name']) {
-    mongoDatabase = process.env['database-name'];
-    mongoPassword = process.env['database-password'];
-    mongoUser = process.env['database-user'];
+  } else if (process.env['database_name']) {
+    mongoDatabase = process.env['database_name'];
+    mongoPassword = process.env['password'];
+    mongoUser = process.env['username'];
     var mongoUriParts = process.env.uri && process.env.uri.split("//");
     mongoHost = process.env.MONGODB_SERVICE_HOST;
     mongoPort = process.env.MONGODB_SERVICE_PORT;;
